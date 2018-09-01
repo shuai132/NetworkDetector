@@ -1,13 +1,13 @@
-package com.xiaoyezi.networkdetector;
+package com.xiaoyezi.networkdetectordemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.xiaoyezi.networklib.NetStateObserver;
-import com.xiaoyezi.networklib.NetworkDetector;
-import com.xiaoyezi.networklib.NetworkType;
+import com.xiaoyezi.networkdetector.NetStateObserver;
+import com.xiaoyezi.networkdetector.NetworkDetector;
+import com.xiaoyezi.networkdetector.NetworkType;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -15,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.xiaoyezi.networkdetectordemo.R.layout.activity_main);
 
-        final TextView textView = findViewById(R.id.network);
+        final TextView textView = findViewById(com.xiaoyezi.networkdetectordemo.R.id.network);
         NetworkDetector.getInstance().addObserver(new NetStateObserver() {
             @Override
             public void onDisconnected() {

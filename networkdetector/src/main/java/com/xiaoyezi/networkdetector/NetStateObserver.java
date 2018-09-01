@@ -1,4 +1,4 @@
-package com.xiaoyezi.networklib;
+package com.xiaoyezi.networkdetector;
 
 public interface NetStateObserver {
     void onDisconnected();

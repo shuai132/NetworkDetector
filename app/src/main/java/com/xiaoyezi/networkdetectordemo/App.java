@@ -1,8 +1,8 @@
-package com.xiaoyezi.networkdetector;
+package com.xiaoyezi.networkdetectordemo;
 
 import android.app.Application;
 
-import com.xiaoyezi.networklib.NetworkDetector;
+import com.xiaoyezi.networkdetector.NetworkDetector;
 
 public class App extends Application {
 

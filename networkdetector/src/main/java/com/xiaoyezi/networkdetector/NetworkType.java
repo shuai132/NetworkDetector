@@ -1,4 +1,4 @@
-package com.xiaoyezi.networklib;
+package com.xiaoyezi.networkdetector;
 
 public enum NetworkType {
     NETWORK_WIFI("WiFi"),

@@ -1,4 +1,4 @@
-package com.xiaoyezi.networklib;
+package com.xiaoyezi.networkdetector;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

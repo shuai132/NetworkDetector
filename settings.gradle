@@ -1,1 +1,1 @@
-include ':app', ':networklib'
+include ':app', ':networkdetector'
