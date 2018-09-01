@@ -2,21 +2,19 @@ package com.xiaoyezi.networkdetector;
 
 import android.app.Application;
 
-import com.xiaoyezi.networklib.NetStateReceiver;
+import com.xiaoyezi.networklib.NetworkDetector;
 
 public class App extends Application {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        // 注册BroadcastReceiver
-        NetStateReceiver.register(this);
+        NetworkDetector.getInstance().init(this);
     }
 
     @Override
     public void onTerminate() {
         super.onTerminate();
-        // 取消BroadcastReceiver注册
-        NetStateReceiver.unregister(this);
+        NetworkDetector.getInstance().deInit(this);
     }
 }

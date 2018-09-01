@@ -6,7 +6,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.xiaoyezi.networklib.NetStateObserver;
-import com.xiaoyezi.networklib.NetStateReceiver;
+import com.xiaoyezi.networklib.NetworkDetector;
 import com.xiaoyezi.networklib.NetworkType;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final TextView textView = findViewById(R.id.network);
-        NetStateReceiver.registerObserver(new NetStateObserver() {
+        NetworkDetector.getInstance().addObserver(new NetStateObserver() {
             @Override
             public void onDisconnected() {
                 Log.d(TAG, "onDisconnected: ");
