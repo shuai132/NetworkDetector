@@ -9,7 +9,7 @@ import android.telephony.TelephonyManager;
 /**
  * 网络状态相关工具类
  */
-public class NetworkUtils {
+public final class NetworkUtils {
 
     private NetworkUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");
