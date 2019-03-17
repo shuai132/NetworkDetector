@@ -17,22 +17,21 @@ allprojects {
 #### 2.在app目录下的build.gradle中添加依赖
 ``` gradle
 dependencies {
-     compile 'com.github.shuai132:NetworkDetector:v0.1.0'
+     implementation "com.github.shuai132:NetworkDetector:${version}"
 }
 ```
-v0.1.0可替换为其他版本的tag或commit-id
 
 ### 2:源码方式添加：
 #### 导入module后添加
 
 ``` gradle
-compile project(':networkdetector')
+implementation project(':networkdetector')
 ```
 
 
 ## 使用方法
+1. 初始化
 ``` java
-...
 public class App extends Application {
 
     @Override
@@ -48,15 +47,9 @@ public class App extends Application {
     }
 }
 ```
-
+2. 使用
 ``` java
-NetworkDetector.getInstance().addObserver(new NetStateObserver() {
-    @Override
-    public void onDisconnected() {
-    }
-
-    @Override
-    public void onConnected(NetworkType networkType) {
-    }
-});
+NetworkDetector.getInstance().addObserver(...);
+NetworkDetector.getInstance().removeObserver(...);
 ```
+具体示例请参考MainActivity.java
